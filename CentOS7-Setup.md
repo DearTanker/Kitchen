@@ -45,6 +45,14 @@ rpm -qa | grep kernel
 yum -y remove 
 ```
 ```
+echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.conf
+sysctl -p
+```
+```
+lsmod | grep bbr
+```
+```
 yum update -y
 yum install epel-release -y
 yum update -y
