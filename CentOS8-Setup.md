@@ -45,3 +45,14 @@ rpm -qa | grep kernel
 ```
 yum -y remove
 ```
+```
+firewall-cmd --get-default-zone
+firewall-cmd --get-active-zones
+firewall-cmd --list-services
+firewall-cmd --get-services
+firewall-cmd --zone=public --list-ports
+firewall-cmd --reload
+firewall-cmd --permanent --add-service=http
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone= public --remove-port=80/tcp --permanent
+```
