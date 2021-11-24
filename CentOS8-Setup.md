@@ -1,4 +1,6 @@
-
+```
+sudo passwd root
+```
 ```
 yum update -y
 yum install epel-release -y
