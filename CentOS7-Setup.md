@@ -28,4 +28,39 @@ Make ML kernel default
 ```
 grub2-set-default 1
 ```
-
+```
+sed -i "s/#DefaultLimitNOFILE=/DefaultLimitNOFILE=infinity/g" /etc/systemd/system.conf
+```
+```
+ulimit -a
+```
+```
+rpm -qa | grep kernel
+```
+```
+yum -y remove 
+```
+```
+yum update -y
+yum install epel-release -y
+yum update -y
+yum install bind-utils net-tools wget ntp policycoreutils-python chrony git dnf jq -y
+yum groups install "Development Tools" -y
+```
+```
+systemctl enable chronyd
+systemctl start chronyd
+timedatectl set-timezone Asia/Shanghai
+timedatectl set-ntp yes
+timedatectl
+```
+```
+yum install vnstat -y
+vnstat -i eth0 -u
+vnstatd -d
+sed -i 's/DaemonUser ""/DaemonUser "root"/g' /etc/vnstat.conf
+sed -i 's/DaemonGroup ""/DaemonGroup "root"/g' /etc/vnstat.conf
+sed -i "s/User=vnstat/User=root/g" /usr/lib/systemd/system/vnstat.service
+service vnstat start
+chkconfig vnstat on
+```
