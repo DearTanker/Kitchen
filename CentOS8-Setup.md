@@ -2,6 +2,9 @@
 sudo passwd root
 ```
 ```
+hostnamectl set-hostname
+```
+```
 yum update -y
 yum install epel-release -y
 yum update -y
