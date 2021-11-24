@@ -36,6 +36,8 @@ systemctl restart v2ray
 systemctl status v2ray
 ```
 
+### Update dat files
+
 ```
 wget --no-check-certificate -O update-v2dat-v2.sh https://git.io/JMvsR
 chmod +x update-v2dat-v2.sh
