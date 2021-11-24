@@ -4,20 +4,20 @@
 yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh
 ```
 ```
-    location /path
-    {
-      if ($http_upgrade != "websocket") {
-          return 404;
-      }
-      proxy_redirect off;
-      proxy_pass http://127.0.0.1:12345;
-      proxy_http_version 1.1;
-      proxy_set_header Upgrade $http_upgrade;
-      proxy_set_header Connection "upgrade";
-      proxy_set_header Host $host;
-      proxy_set_header X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    }
+location /path
+{
+  if ($http_upgrade != "websocket") {
+      return 404;
+  }
+  proxy_redirect off;
+  proxy_pass http://127.0.0.1:12345;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection "upgrade";
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+}
 ```
 
 ### Some info
