@@ -1,3 +1,5 @@
+### Some info
+
 ```
 installed: /usr/local/bin/v2ray
 installed: /usr/local/bin/v2ctl
@@ -11,7 +13,7 @@ installed: /etc/systemd/system/v2ray.service
 installed: /etc/systemd/system/v2ray@.service
 ```
 
-### 安装和更新 V2Ray
+### Install V2Ray
 
 ```
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
@@ -19,10 +21,18 @@ bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/
 
 ```
 ln -s "/usr/local/etc/v2ray/config.json"
+```
+```
 /usr/local/bin/v2ray -test -config /usr/local/etc/v2ray/config.json
+```
+```
 systemctl enable v2ray
 systemctl is-enabled v2ray.service
+```
+```
 systemctl restart v2ray
+```
+```
 systemctl status v2ray
 ```
 
@@ -32,7 +42,7 @@ chmod +x update-v2dat-v2.sh
 ./update-v2dat-v2.sh
 ```
 
-### 移除 V2Ray
+### Remove V2Ray
 
 ```
 # bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
