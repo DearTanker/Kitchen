@@ -22,6 +22,10 @@ Check kernel list order
 ```
 egrep ^menuentry /etc/grub2.cfg | cut -f 2 -d \'
 ```
+or
+```
+egrep ^menuentry /etc/grub2-efi.cfg | cut -f 2 -d \'
+```
 
 Make ML kernel default
 
