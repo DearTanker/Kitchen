@@ -40,6 +40,9 @@ installed: /etc/systemd/system/v2ray@.service
 ```
 bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh)
 ```
+```
+touch /usr/local/share/v2ray/.undat
+```
 
 ```
 ln -s "/usr/local/etc/v2ray/config.json"
