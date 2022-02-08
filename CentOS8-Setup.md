@@ -1,18 +1,25 @@
 ```
 sudo passwd root
 ```
+
 ```
 hostnamectl set-hostname
 ```
+
 ```
 dnf --disablerepo '*' --enablerepo=extras swap centos-linux-repos centos-stream-repos
 dnf distro-sync
 ```
+
 ```
 yum update -y
 yum install epel-release -y
 yum update -y
 yum groups install "Development Tools" -y
+```
+
+```
+yum clean all
 ```
 
 ```
