@@ -1,3 +1,8 @@
+Set hostname
+```
+hostnamectl set-hostname
+```
+
 Set root passwd
 
 ```
