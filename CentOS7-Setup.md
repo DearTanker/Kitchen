@@ -81,3 +81,10 @@ sed -i "s/User=vnstat/User=root/g" /usr/lib/systemd/system/vnstat.service
 service vnstat start
 chkconfig vnstat on
 ```
+
+禁用 IPv6
+```
+echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.conf
+sysctl -p
+```
