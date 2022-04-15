@@ -72,3 +72,10 @@ firewall-cmd --permanent --add-service=http
 firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --zone= public --remove-port=80/tcp --permanent
 ```
+
+禁用 IPv6
+```
+echo 'net.core.default_qdisc=fq' | sudo tee -a /etc/sysctl.conf
+echo 'net.ipv4.tcp_congestion_control=bbr' | sudo tee -a /etc/sysctl.conf
+sysctl -p
+```
