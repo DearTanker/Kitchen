@@ -62,6 +62,9 @@ rpm -qa | grep kernel
 yum -y remove
 ```
 ```
+yum remove --oldinstallonly --setopt installonly_limit=2 kernel
+```
+```
 firewall-cmd --get-default-zone
 firewall-cmd --get-active-zones
 firewall-cmd --list-services
