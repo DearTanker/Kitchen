@@ -26,4 +26,4 @@ echo -e "${GREEN}Download successful!${NC}"
 
 echo -e "${GREEN}Restarting PassWall2 ...${NC}"
 
-/usr/share/passwall2/iptables.sh flush_ipset > /dev/null 2>&1 &
+/usr/share/passwall2/iptables.sh flush_ipset > /dev/null 2>&1
