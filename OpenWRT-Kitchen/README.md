@@ -1,4 +1,5 @@
 ```
+cd /usr/share/passwall2/
 wget --no-check-certificate -O https://raw.githubusercontent.com/DearTanker/Kitchen/OpenWRT-Kitchen/op-passwall2-dat-rule-update.sh
 chmod +x op-passwall2-dat-rule-update.sh
 ```
