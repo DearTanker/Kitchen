@@ -2,6 +2,7 @@
 cd /usr/share/passwall2/
 wget --no-check-certificate https://raw.githubusercontent.com/DearTanker/Kitchen/main/OpenWRT-Kitchen/op-passwall2-dat-rule-update.sh
 chmod +x op-passwall2-dat-rule-update.sh
+./op-passwall2-dat-rule-update.sh
 ```
 Scheduled Tasks
 ```
