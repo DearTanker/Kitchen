@@ -64,7 +64,7 @@ systemctl status v2ray
 ### Update dat files
 
 ```
-wget --no-check-certificate -O update-v2dat-v2.sh https://raw.githubusercontent.com/DearTanker/Linux-Kitchen/trash/update-v2dat-v2.sh
+wget --no-check-certificate -O update-v2dat-v2.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/update-v2dat-v2.sh
 chmod +x update-v2dat-v2.sh
 ./update-v2dat-v2.sh
 ```
