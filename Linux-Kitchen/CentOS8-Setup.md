@@ -20,6 +20,7 @@ yum groups install "Development Tools" -y
 
 ```
 yum clean all
+yum autoremove -y
 ```
 
 ```
