@@ -1,10 +1,8 @@
 @echo off
 
-echo ¿ªÊ¼ÇåÀí PUBG Ïà¹ØËùÓĞ½ø³Ì£º
+echo å¼€å§‹æ¸…ç† PUBG ç›¸å…³æ‰€æœ‰è¿›ç¨‹ï¼š
 echo ------------------------------------------------
 
-taskkill /f /im BEService.exe
-taskkill /f /im GameOverlayUI.exe
 taskkill /f /im TslGame.exe
 taskkill /f /im TslGame_BE.exe
 taskkill /f /im TslGame_UC.exe
@@ -13,8 +11,12 @@ taskkill /f /im ExecPubg.exe
 taskkill /f /im zksvc.exe
 taskkill /f /im iigw_server.exe
 taskkill /f /im ucldr_battlegrounds_gl.exe
+taskkill /f /im SGuard64.exe
+taskkill /f /im SGuardSvc64.exe
+taskkill /f /im BEService.exe
+taskkill /f /im GameOverlayUI.exe
 
 echo ------------------------------------------------
-echo ÇåÀíÍê³É£¬ÇëµÈ´ı´Ë´°¿Ú×Ô¶¯¹Ø±ÕºóÔÙÔËĞĞPUBG¡£
+echo æ¸…ç†å®Œæˆï¼Œè¯·ç­‰å¾…æ­¤çª—å£è‡ªåŠ¨å…³é—­åå†è¿è¡ŒPUBGã€‚
 
-timeout /nobreak /t 5
+timeout /nobreak /t 3
