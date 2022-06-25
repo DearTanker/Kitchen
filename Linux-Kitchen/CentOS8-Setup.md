@@ -6,6 +6,21 @@ sudo passwd root
 hostnamectl set-hostname
 ```
 
+remove cockpit
+
+```
+yum remove cockpit*
+systemctl stop cockpit
+rpm -e cockpit-system
+rpm -e cockpit-bridge
+rpm -e cockpit-ws
+rm -R -f /run/cockpit
+rm -R -f /etc/cockpit
+rm -R -f /usr/share/cockpit
+rm -R -f /var/lib/selinux/targeted/active/modules/100/cockpit
+rm -R -f /usr/share/selinux/targeted/default/active/modules/100/cockpit
+```
+
 ```
 dnf --disablerepo '*' --enablerepo=extras swap centos-linux-repos centos-stream-repos
 dnf distro-sync
