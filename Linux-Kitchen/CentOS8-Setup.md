@@ -9,8 +9,8 @@ hostnamectl set-hostname
 remove cockpit
 
 ```
-yum remove cockpit*
 systemctl stop cockpit
+yum remove cockpit*
 rpm -e cockpit-system
 rpm -e cockpit-bridge
 rpm -e cockpit-ws
