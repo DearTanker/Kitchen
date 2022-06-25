@@ -10,6 +10,8 @@ remove cockpit
 
 ```
 systemctl stop cockpit
+systemctl disable cockpit
+firewall-cmd --permanent --remove-service=cockpit
 yum remove cockpit*
 rpm -e cockpit-system
 rpm -e cockpit-bridge
