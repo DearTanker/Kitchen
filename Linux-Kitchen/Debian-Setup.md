@@ -31,6 +31,13 @@ sysctl -p
 lsmod | grep bbr
 ```
 
+Change ulimit Open files
+
+```
+echo 'root soft nofile infinity' | tee -a /etc/security/limits.conf
+echo '*    soft nofile infinity' | tee -a /etc/security/limits.conf
+```
+
 ```
 ulimit -a
 ```
