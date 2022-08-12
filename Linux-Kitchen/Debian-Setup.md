@@ -44,14 +44,33 @@ ulimit -a
 
 ```
 apt update -y
+```
+```
 apt upgrade -y
+```
+```
 apt install wget curl -y
+```
+```
 apt install net-tools -y
 ```
-
 ```
 apt full-upgrade -y
 ```
+
+Remove old kernel
+
+```
+uname -a
+```
+
+```
+dpkg -l | grep linux-image
+```
+```
+dpkg --purge --force-remove-essential 
+```
+
 
 Setup TimeSync
 
