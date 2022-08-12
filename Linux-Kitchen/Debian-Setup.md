@@ -9,6 +9,10 @@ Set root passwd
 sudo passwd root
 ```
 
+```
+rm -rf /etc/motd
+```
+
 Check kernel verison
 
 ```
