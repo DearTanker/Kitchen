@@ -1,8 +1,20 @@
 ### Install AAPanel
 
+Debian
+```
+wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && bash install.sh
+```
+CentOS
 ```
 yum install -y wget && wget -O install.sh http://www.aapanel.com/script/install_6.0_en.sh && bash install.sh
 ```
+
+Update pip
+
+```
+/www/server/panel/pyenv/bin/python3.7 -m pip install --upgrade pip
+```
+
 ```
 location /path
 {
