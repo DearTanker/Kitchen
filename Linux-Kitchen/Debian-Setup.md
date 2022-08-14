@@ -75,10 +75,8 @@ dpkg --purge --force-remove-essential
 Setup TimeSync
 
 ```
-apt install systemd-timesyncd
-
+apt install systemd-timesyncd -y
 timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp yes
 timedatectl
-
 ```
