@@ -21,6 +21,7 @@ apt-get install speedtest
 Fedora/Centos/Redhat
 
 ```
+yum -y install curl
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.rpm.sh | bash
 yum -y install speedtest
 ```
