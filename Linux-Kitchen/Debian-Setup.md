@@ -80,14 +80,3 @@ timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp yes
 timedatectl
 ```
-
-Install Speedtest cli
-
-```
-apt-get -y install curl
-curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | bash
-apt-get -y install speedtest
-```
-```
-speedtest
-```
