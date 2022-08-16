@@ -55,7 +55,7 @@ apt install wget curl -y
 apt install net-tools -y
 ```
 ```
-apt full-upgrade -y
+apt autoremove -y
 ```
 
 Remove old kernel
