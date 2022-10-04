@@ -49,10 +49,7 @@ apt update -y
 apt upgrade -y
 ```
 ```
-apt install wget curl -y
-```
-```
-apt install net-tools -y
+apt install wget curl net-tools -y
 ```
 ```
 apt autoremove -y
