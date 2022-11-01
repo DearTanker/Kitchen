@@ -14,6 +14,7 @@ Update pip
 ```
 /www/server/panel/pyenv/bin/python3.7 -m pip install --upgrade pip
 ```
+Local Proxy
 
 ```
 location /path
@@ -31,7 +32,19 @@ location /path
   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 }
 ```
+Remote Proxy
 
+```
+location /path {
+        proxy_pass https://REMOTE_DOMAIN/PATH;
+        proxy_set_header Host REMOTE_DOMAIN:443;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto https;
+}
+
+```
 ### Some info
 
 ```
