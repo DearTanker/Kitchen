@@ -43,10 +43,7 @@ ulimit -a
 ```
 
 ```
-apt update -y
-```
-```
-apt upgrade -y
+apt update -y && apt dist-upgrade -y
 ```
 ```
 apt install wget curl net-tools -y
