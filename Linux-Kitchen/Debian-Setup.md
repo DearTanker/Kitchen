@@ -1,3 +1,9 @@
+DD Debian 11
+
+```
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -p PassWord
+```
+
 Set hostname
 ```
 hostnamectl set-hostname
