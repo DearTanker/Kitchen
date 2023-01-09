@@ -46,3 +46,18 @@ Run it
 ```
 ./fast
 ```
+
+
+iPerf3
+```
+apt install iperf3 -y
+```
+Run as Server
+```
+iperf3 -s
+```
+Test from Client
+```
+iperf3 -c xxx.xxx.xxx.xxx -P 10 -R
+```
+
