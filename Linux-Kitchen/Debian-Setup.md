@@ -4,6 +4,12 @@ DD Debian 11
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -p PassWord
 ```
 
+DD Debian 11 GCP
+
+```
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 --ip-addr 10.170.0.2 --ip-gate 10.170.0.1 --ip-mask 255.255.255.0 -p PassWord
+```
+
 Set hostname
 ```
 hostnamectl set-hostname
