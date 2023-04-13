@@ -77,7 +77,6 @@ dpkg -l | grep linux-image
 dpkg --purge --force-remove-essential 
 ```
 
-
 Setup TimeSync
 
 ```
@@ -86,6 +85,25 @@ timedatectl set-timezone Asia/Shanghai
 timedatectl set-ntp yes
 timedatectl
 ```
+
+Debian Install UFW
+
+```
+apt install ufw -y
+```
+
+```
+ufw allow 12345/tcp
+```
+
+```
+ufw enable
+```
+
+```
+ufw status
+```
+
 
 Disabled IPV6
 
