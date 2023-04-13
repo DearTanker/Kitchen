@@ -1,7 +1,7 @@
 DD Debian 11
 
 ```
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 --dev-net -port 12345 -p PassWord
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -port 12345 -p PassWord
 ```
 
 DD Debian 11 GCP
