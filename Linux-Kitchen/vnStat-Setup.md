@@ -1,4 +1,4 @@
-CentOS
+Deian
 
 ```
 yum install vnstat -y
@@ -9,4 +9,14 @@ sed -i 's/DaemonGroup ""/DaemonGroup "root"/g' /etc/vnstat.conf
 sed -i "s/User=vnstat/User=root/g" /usr/lib/systemd/system/vnstat.service
 service vnstat start
 chkconfig vnstat on
+```
+
+
+
+CentOS
+
+```
+apt install vnstat -y
+vnstat -i eth0
+vnstatd -d
 ```
