@@ -112,3 +112,12 @@ echo 'net.ipv6.conf.all.disable_ipv6 =1' | tee -a /etc/sysctl.conf
 echo 'net.ipv6.conf.default.disable_ipv6 =1' | tee -a /etc/sysctl.conf
 sysctl -p
 ```
+
+
+
+Change nameserver to 1.1.1.1
+
+```
+sed -i "s/nameserver 8.8.8.8/nameserver 1.1.1.1/g" /etc/resolv.conf
+echo 'nameserver 1.0.0.1' | tee -a /etc/resolv.conf
+```
