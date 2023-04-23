@@ -99,3 +99,128 @@ chmod +x update-v2dat-v2.sh
 ```
 # bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
 ```
+
+
+### Multi IP in & out sample
+
+```
+{
+    "inbounds": [
+        {
+            "protocol": "vmess",
+            "listen": "1.1.1.1",
+            "port": 12345,
+            "tag":"in-01",
+            "sniffing":{
+                "enabled":true,
+                "destOverride":[
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "clients": [
+                    {
+                        "id": "uuid"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            }
+        },
+        {
+            "protocol": "vmess",
+            "listen": "2.2.2.2",
+            "port": 12345,
+            "tag":"in-02",
+            "sniffing":{
+                "enabled":true,
+                "destOverride":[
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "clients": [
+                    {
+                        "id": "uuid"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            }
+        }
+    ],
+    "routing":{
+        "rules":[
+            {
+                "type":"field",
+                "inboundTag":"in-01",
+                "outboundTag":"out-01"
+            },
+            {
+                "type":"field",
+                "inboundTag":"in-02",
+                "outboundTag":"out-02"
+            }
+        ]
+    },
+    "outbounds": [
+        {
+            "sendThrough":"1.1.1.1",
+            "protocol":"freedom",
+            "settings":{
+                "domainStrategy":"UseIP"
+            },
+            "tag":"out-01"
+        },
+        {
+            "sendThrough":"2.2.2.2",
+            "protocol":"freedom",
+            "settings":{
+                "domainStrategy":"UseIP"
+            },
+            "tag":"out-02"
+        }
+    ]
+}
+
+```
+
+### liberal-boy’s tls-shunt-proxy sample
+
+```
+listen: 0.0.0.0:443
+vhosts:
+    # 将 example.com 改为你的域名
+  - name: www.example.com
+    tlsoffloading: true
+    managedcert: true
+    alpn: h2,http/1.1
+    # 如果不需要兼容 tls12, 可改为 tls13
+    protocols: tls12,tls13
+    http:
+      handler: fileServer
+      # /var/www/html 是静态网站目录
+      args: /var/www/html
+    default:
+      handler: proxyPass
+      args: 1.1.1.1:54301
+
+    # 将 example.com 改为你的域名
+  - name: www.example.com
+    tlsoffloading: true
+    managedcert: true
+    alpn: h2,http/1.1
+    # 如果不需要兼容 tls12, 可改为 tls13
+    protocols: tls12,tls13
+    http:
+      handler: fileServer
+      # /var/www/html 是静态网站目录
+      args: /var/www/html
+    default:
+      handler: proxyPass
+      args: 2.2.2.2:54301
+```
