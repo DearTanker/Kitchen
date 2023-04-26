@@ -98,6 +98,16 @@ apt install ufw -y
 
 ```
 ufw allow 12345/tcp
+ufw allow 12345/udp
+```
+
+```
+ufw allow 17800/tcp
+ufw allow 17800/udp
+ufw allow 80/tcp
+ufw allow 80/udp
+ufw allow 443/tcp
+ufw allow 443/udp
 ```
 
 ```
