@@ -58,7 +58,7 @@ ulimit -a
 apt update -y && apt dist-upgrade -y
 ```
 ```
-apt install wget curl net-tools -y
+apt install wget curl net-tools sudo -y
 ```
 ```
 apt autoremove -y
