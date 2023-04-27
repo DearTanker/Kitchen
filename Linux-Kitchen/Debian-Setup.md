@@ -92,6 +92,18 @@ timedatectl
 
 Debian Install UFW
 
+
+```
+apt purge ufw iptables
+```
+```
+apt install iptables -y
+```
+```
+update-alternatives --set iptables /usr/sbin/iptables-legacy
+update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+```
+
 ```
 apt install ufw -y
 ```
