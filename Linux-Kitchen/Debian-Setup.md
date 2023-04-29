@@ -1,14 +1,33 @@
-DD Debian 11
+MoeClub DD Debian 11
 
 ```
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -port 12345 -p PassWord
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -port 12345 -p 'PassWord'
 ```
 
-DD Debian 11 GCP
+MoeClub DD Debian 11 with network static
 
 ```
-bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 --ip-addr 10.170.0.2 --ip-gate 10.170.0.1 --ip-mask 255.255.255.0 -p PassWord
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -port 12345 -p 'PassWord' --ip-addr 10.170.0.2 --ip-gate 10.170.0.1 --ip-mask 255.255.255.0
 ```
+
+Debi DD Debian 11
+
+```
+curl -fLO https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chmod a+rx debi.sh
+```
+- Normal
+```
+./debi.sh --version 11 --ethx --user root --ssh-port 12345 --password 'PassWord'
+```
+- Low Mem
+```
+./debi.sh --force-lowmem 1 --version 11 --ethx --user root --ssh-port 12345 --password 'PassWord'
+```
+
+```
+shutdown -r now
+```
+
 
 Set hostname
 ```
