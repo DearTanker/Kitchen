@@ -74,7 +74,7 @@ ulimit -a
 ```
 
 ```
-apt update -y && apt dist-upgrade -y
+apt update -y && apt dist-upgrade python3 -y
 ```
 ```
 apt install wget curl net-tools sudo -y
