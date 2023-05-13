@@ -3,7 +3,10 @@ MoeClub DD Debian 11
 ```
 bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -port 12345 -p 'PassWord'
 ```
-
+MoeClub DD Debian 11 @CN
+```
+bash <(wget --no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/InstallNET.sh') -d 11 -v 64 -port 12345 -p 'PassWord' --mirror 'http://mirrors.ustc.edu.cn/debian/'
+```
 MoeClub DD Debian 11 with network static
 
 ```
