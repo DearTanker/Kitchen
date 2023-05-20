@@ -30,3 +30,29 @@ warp-cli settings
 ```
 warp-cli warp-stats
 ```
+
+
+```
+		{
+			"tag": "warp",
+			"protocol": "socks",
+            	"settings": {
+			"servers": [
+				{
+				    "address": "127.0.0.1",
+				    "port": 40000, 
+				    "users": []
+				}
+			]
+			}
+		}
+```
+```
+			{
+				"type": "field",
+				"outboundTag": "warp",
+				"domain": [
+					"geosite:openai"
+                		]
+			}
+```
