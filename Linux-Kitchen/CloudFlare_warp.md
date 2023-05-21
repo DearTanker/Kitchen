@@ -33,10 +33,16 @@ warp-cli warp-stats
 
 
 ```
+  "outbounds": [
+  	{
+		"protocol": "freedom",
+		"settings": {},
+		"tag": "free"
+	},
 	{
 		"tag": "warp",
 		"protocol": "socks",
-	"settings": {
+       	"settings": {
 		"servers": [
 			{
 			    "address": "127.0.0.1",
@@ -46,16 +52,20 @@ warp-cli warp-stats
 		]
 		}
 	}
-```
-```
+  ],
   "routing": {
-  	"domainStrategy": "IPOnDemand",
+  		"domainStrategy": "IPOnDemand",
       "rules": [
         {
             "type": "field",
             "outboundTag": "warp",
-            "domain": ["geosite:openai"]
+            "domain": ["geosite:openai","domain:ip.sb"]
         }
       ]
     }
+}
+```
+
+```
+warp-cli disconnect && sleep 3 &&warp-cli connect && sleep 3&& export ALL_PROXY=socks5://127.0.0.1:40000 && curl myip.ipip.net
 ```
