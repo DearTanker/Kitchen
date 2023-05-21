@@ -33,26 +33,29 @@ warp-cli warp-stats
 
 
 ```
-		{
-			"tag": "warp",
-			"protocol": "socks",
-            	"settings": {
-			"servers": [
-				{
-				    "address": "127.0.0.1",
-				    "port": 40000, 
-				    "users": []
-				}
-			]
-			}
-		}
-```
-```
+	{
+		"tag": "warp",
+		"protocol": "socks",
+	"settings": {
+		"servers": [
 			{
-				"type": "field",
-				"outboundTag": "warp",
-				"domain": [
-					"geosite:openai"
-                		]
+			    "address": "127.0.0.1",
+			    "port": 40000, 
+			    "users": []
 			}
+		]
+		}
+	}
+```
+```
+  "routing": {
+  	"domainStrategy": "IPOnDemand",
+      "rules": [
+        {
+            "type": "field",
+            "outboundTag": "warp",
+            "domain": ["geosite:openai"]
+        }
+      ]
+    }
 ```
