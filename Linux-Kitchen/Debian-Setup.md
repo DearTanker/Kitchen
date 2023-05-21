@@ -80,7 +80,7 @@ ulimit -a
 apt update -y && apt dist-upgrade -y
 ```
 ```
-apt install wget curl net-tools sudo python3 -y
+apt install wget curl net-tools sudo python3 lsb-release gpg -y
 ```
 ```
 apt autoremove -y
