@@ -116,7 +116,7 @@ Debian Install UFW
 
 
 ```
-apt purge ufw iptables
+apt purge ufw iptables -y
 ```
 ```
 apt install iptables -y
