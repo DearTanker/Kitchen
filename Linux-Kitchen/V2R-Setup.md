@@ -100,6 +100,79 @@ chmod +x update-v2dat-v2.sh
 # bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
 ```
 
+### Single IP in & Multi IP out sample
+
+```
+{
+    "inbounds": [
+        {
+            "protocol": "vmess",
+            "listen": "0.0.0.0",
+            "port": 12345,
+            "sniffing":{
+                "enabled":true,
+                "destOverride":[
+                    "http",
+                    "tls"
+                ]
+            },
+            "settings": {
+                "clients": [
+                    {
+                      "id": "uuid01",
+                      "email": "1"
+                    },
+                    {
+                      "id": "uuid02",
+                      "email": "2"
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp"
+            }
+        }
+    ],
+    "routing":{
+        "rules":[
+            {
+                "type":"field",
+                "user": [
+                    "1"
+                ],
+                "outboundTag":"out-01"
+            },
+            {
+                "type":"field",
+                "user": [
+                    "2"
+                ],
+                "outboundTag":"out-02"
+            }
+        ]
+    },
+    "outbounds": [
+        {
+            "sendThrough":"IP01",
+            "protocol":"freedom",
+            "settings":{
+                "domainStrategy":"UseIP"
+            },
+            "tag":"out-01"
+        },
+        {
+            "sendThrough":"IP02",
+            "protocol":"freedom",
+            "settings":{
+                "domainStrategy":"UseIP"
+            },
+            "tag":"out-02"
+        }
+    ]
+}
+
+
+```
 
 ### Multi IP in & out sample
 
