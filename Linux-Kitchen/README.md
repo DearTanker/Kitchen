@@ -61,3 +61,8 @@ Test from Client
 iperf3 -c xxx.xxx.xxx.xxx -P 10 -R
 ```
 
+nekoneko cloud's linux net optimize tools
+
+```
+wget https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/nekoneko_linux_net_optimize_tools.sh -O tools.sh && bash tools.sh
+```
