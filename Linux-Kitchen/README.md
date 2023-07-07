@@ -8,6 +8,11 @@ chmod +x update-v2dat-v2.sh
 https://github.com/DearTanker/Kitchen/Linux-Kitchen/raw/main/xom.tar.gz
 ```
 
+nexttrace
+
+```
+bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
+```
 Speedtest cli
 
 Ubuntu/Debian
