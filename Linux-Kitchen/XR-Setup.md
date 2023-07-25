@@ -1,3 +1,19 @@
+
+
+### Install XRay
+
+```
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install  --without-geodata
+```
+
+### Update dat files
+
+```
+wget --no-check-certificate -O XR-update-dat.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/XR-update-dat.sh
+chmod +x XR-update-dat.sh
+./XR-update-dat.sh
+```
+
 ### Some info
 
 ```
@@ -14,12 +30,6 @@ installed: /usr/local/share/xray/geosite.dat
 installed: /var/log/xray/access.log
 installed: /var/log/xray/error.log
 ---------------------------------------------------
-```
-
-### Install XRay
-
-```
-bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install  --without-geodata
 ```
 
 ### More Usage
@@ -50,14 +60,6 @@ systemctl restart xray
 
 ```
 systemctl status xray
-```
-
-### Update dat files
-
-```
-wget --no-check-certificate -O XR-update-dat.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/XR-update-dat.sh
-chmod +x XR-update-dat.sh
-./XR-update-dat.sh
 ```
 
 ### Remove xray
