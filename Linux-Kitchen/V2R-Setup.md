@@ -70,7 +70,7 @@ touch /usr/local/share/v2ray/.undat
 ```
 
 ```
-ln -s "/usr/local/etc/v2ray/config.json"
+ln -s "/usr/local/etc/v2ray/config.json" v2-config.json
 ```
 ```
 /usr/local/bin/v2ray test -config /usr/local/etc/v2ray/config.json
@@ -89,9 +89,9 @@ systemctl status v2ray
 ### Update dat files
 
 ```
-wget --no-check-certificate -O update-v2dat-v2.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/update-v2dat-v2.sh
-chmod +x update-v2dat-v2.sh
-./update-v2dat-v2.sh
+wget --no-check-certificate -O V2R-update-dat.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/V2R-update-dat.sh
+chmod +x V2R-update-dat.sh
+./V2R-update-dat.sh
 ```
 
 ### Remove V2Ray
