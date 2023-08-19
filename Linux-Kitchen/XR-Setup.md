@@ -40,7 +40,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 
 ```
-ln -s "/usr/local/etc/v2ray/config.json" xr-config.json
+ln -s "/usr/local/etc/xray/config.json" xr-config.json
 ```
 
 ### Config Test
