@@ -297,3 +297,12 @@ vhosts:
       handler: proxyPass
       args: 2.2.2.2:54301
 ```
+
+
+### VMessAEAD Close
+
+```
+/etc/systemd/system/v2ray.service.d/override.conf
+[Service]
+Environment=V2RAY_VMESS_AEAD_FORCED=false
+```
