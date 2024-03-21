@@ -7,6 +7,10 @@ nexttrace
 ```
 bash <(curl -Ls https://raw.githubusercontent.com/sjlleo/nexttrace/main/nt_install.sh)
 ```
+```
+curl nxtrace.org/nt | bash
+```
+
 Speedtest cli
 
 Ubuntu/Debian
