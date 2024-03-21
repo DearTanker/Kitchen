@@ -51,6 +51,11 @@ Set root passwd
 sudo passwd root
 ```
 
+SSH restart
+```
+/etc/init.d/ssh restart
+```
+
 Clean WARRANTY notice
 
 ```
