@@ -70,5 +70,5 @@ warp-cli warp-stats
 ```
 
 ```
-warp-cli disconnect && sleep 3 &&warp-cli connect && sleep 3&& export ALL_PROXY=socks5://127.0.0.1:40000 && curl myip.ipip.net
+warp-cli disconnect && sleep 3 &&warp-cli connect && sleep 3&& export ALL_PROXY=socks5://127.0.0.1:40000 && curl myip.ipip.net && export ALL_PROXY= && curl myip.ipip.net
 ```
