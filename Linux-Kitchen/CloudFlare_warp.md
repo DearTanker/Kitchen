@@ -1,4 +1,4 @@
-https://pkg.cloudflareclient.com/install
+[[https://pkg.cloudflareclient.com/install](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/manual-deployment/)](https://pkg.cloudflareclient.com/)
 
 ```
 curl https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
@@ -13,16 +13,13 @@ apt update -y
 apt install -y cloudflare-warp
 ```
 ```
-warp-cli register
+warp-cli registration new
 ```
 ```
 warp-cli set-mode proxy
 ```
 ```
 warp-cli connect
-```
-```
-warp-cli enable-always-on
 ```
 ```
 warp-cli settings
