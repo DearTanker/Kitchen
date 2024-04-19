@@ -22,7 +22,7 @@ Usage
 warp-cli registration new
 ```
 ```
-warp-cli set-mode proxy
+warp-cli mode proxy
 ```
 ```
 warp-cli connect
