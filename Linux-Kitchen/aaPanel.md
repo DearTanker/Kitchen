@@ -25,5 +25,5 @@ chattr +i -R /www/server/panel/logs/request
 ```
 
 ```
-wget -O optimize.sh https://raw.githubusercontent.com/chenjinnian/bt_clean/master/optimize_aapanel.sh && bash optimize.sh
+wget -O optimize.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/optimize_aapanel.sh && bash optimize.sh
 ```
