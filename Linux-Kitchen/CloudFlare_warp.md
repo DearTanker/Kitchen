@@ -31,7 +31,7 @@ warp-cli connect
 warp-cli settings
 ```
 ```
-warp-cli warp-stats
+warp-cli tunnel stats
 ```
 
 
