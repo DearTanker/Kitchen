@@ -49,6 +49,14 @@ Run it
 ```
 ./fast
 ```
+mikkelam fast-cli
+
+```
+curl -L https://github.com/mikkelam/fast-cli/releases/latest/download/fast-cli_linux_amd64.tar.gz  | tar xz
+```
+```
+./fast-cli
+```
 
 
 iPerf3
