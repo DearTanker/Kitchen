@@ -50,6 +50,7 @@ vi /etc/dhcp/dhclient-enter-hooks.d/nodnsupdate
 make_resolv_conf(){
     :
 }
+
 ```
 ```
 chmod +x /etc/dhcp/dhclient-enter-hooks.d/nodnsupdate
