@@ -40,6 +40,22 @@ curl -fLO https://raw.githubusercontent.com/bohanyang/debi/master/debi.sh && chm
 shutdown -r now
 ```
 
+Disable dns auto change on Debian 12 Desktop version
+
+```
+vi /etc/dhcp/dhclient-enter-hooks.d/nodnsupdate
+```
+```
+#!/usr/bin/env sh
+make_resolv_conf(){
+    :
+}
+```
+```
+chmod +x /etc/dhcp/dhclient-enter-hooks.d/nodnsupdate
+```
+
+
 Set hostname
 ```
 hostnamectl set-hostname
