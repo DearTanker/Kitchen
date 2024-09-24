@@ -96,7 +96,7 @@ chmod +x V2R-update-dat.sh
 ### Remove V2Ray
 
 ```
-# bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
+bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) --remove
 ```
 
 ### Single IP in & Multi IP out sample
