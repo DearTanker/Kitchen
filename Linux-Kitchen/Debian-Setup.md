@@ -110,7 +110,7 @@ ulimit -a
 apt update -y && apt dist-upgrade -y
 ```
 ```
-apt install wget curl net-tools sudo python3 lsb-release gpg vnstat iperf3 -y
+apt install wget curl net-tools sudo htop iotop python3 lsb-release gpg vnstat iperf3 -y
 ```
 ```
 apt autoremove -y
