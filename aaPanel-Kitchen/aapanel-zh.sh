@@ -21,14 +21,14 @@ purple(){
 
 # 安装aapanel面板
 function aapanel-install(){
-wget -O "/root/aapanel-install.sh" "http://www.aapanel.com/script/install_6.0_en.sh"
+wget -O "/root/aapanel-install.sh" "https://www.aapanel.com/script/install_7.0_en.sh"
 red "正在从官网安装原版aapanel面板."
 bash "/root/aapanel-install.sh"
 }
 
 # 安装bt面板
 function bt-install(){  
-wget -O "/root/bt-install.sh" "http://download.bt.cn/install/install_6.0.sh"
+wget -O "/root/bt-install.sh" "https://download.bt.cn/install/install_lts.sh"
 red "正在从官网安装原版宝塔面板.."
 bash "/root/bt-install.sh"
 }
