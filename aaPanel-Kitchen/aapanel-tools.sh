@@ -19,7 +19,7 @@ purple(){
 
 # 安装 aapanel 面板
 function aapanel-install(){
-	wget -O "/root/aapanel-install.sh" "https://www.aapanel.com/script/install_7.0_en.sh"
+	wget -O "/root/aapanel-install.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aapanel-install.sh"
 	red "正在从官网安装原版 aapanel 面板."
 	bash "/root/aapanel-install.sh"
 }
