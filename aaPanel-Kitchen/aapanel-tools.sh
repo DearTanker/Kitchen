@@ -19,30 +19,30 @@ purple(){
 
 # 安装 aapanel 面板
 function aapanel-install(){
-	wget -O "/root/aapanel-install.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aapanel-install.sh"
+	wget -O "/root/aapanel-install.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-install.sh"
 	red "正在从官网安装原版 aapanel 面板."
 	bash "/root/aapanel-install.sh"
 }
 
 # 降级至 aapanel 6.8.37 (最后一个 6 系)
 function downgrade-aapanel-6.8.37(){
-	wget -O "/root/LinuxPanel_EN-6.8.37.zip" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aaPanel-6/LinuxPanel_EN-6.8.37.zip"
+	wget -O "/root/LinuxPanel_EN-6.8.37.zip" "https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aaPanel-6/LinuxPanel_EN-6.8.37.zip"
 	red "下载完成,正在降级."
-	unzip LinuxPanel_EN-6.8.23.zip
+	unzip LinuxPanel_EN-6.8.37.zip
 	cd /root/panel
-	wget -O "/root/panel/aapanel-downgrade.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aapanel-downgrade.sh" 
+	wget -O "/root/panel/aapanel-downgrade.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-downgrade.sh" 
 	bash "/root/panel/aapanel-downgrade.sh"
 	red "降级成功."
-	rm /root/LinuxPanel_EN-6.8.23.zip /root/panel/ -rf
+	rm /root/LinuxPanel_EN-6.8.37.zip /root/panel/ -rf
 }
 
 # 降级至 aapanel 6.8.23 (最后一个无广告版本)
 function downgrade-aapanel-6.8.23(){
-	wget -O "/root/LinuxPanel_EN-6.8.23.zip" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aaPanel-6/LinuxPanel_EN-6.8.23.zip"
+	wget -O "/root/LinuxPanel_EN-6.8.23.zip" "https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aaPanel-6/LinuxPanel_EN-6.8.23.zip"
 	red "下载完成,正在降级."
 	unzip LinuxPanel_EN-6.8.23.zip
 	cd /root/panel
-	wget -O "/root/panel/aapanel-downgrade.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aapanel-downgrade.sh" 
+	wget -O "/root/panel/aapanel-downgrade.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-downgrade.sh" 
 	bash "/root/panel/aapanel-downgrade.sh"
 	red "降级成功."
 	rm /root/LinuxPanel_EN-6.8.23.zip /root/panel/ -rf
@@ -50,7 +50,7 @@ function downgrade-aapanel-6.8.23(){
 
 # 卸载面板
 	function uninstall(){
-	wget -O "/root/aapanel-uninstall.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/refs/heads/main/aaPanel-Kitchen/aapanel-uninstall.sh"
+	wget -O "/root/aapanel-uninstall.sh" "https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-uninstall.sh"
 	bash "/root/aapanel-uninstall.sh"
 	red "面板卸载成功."
 }
