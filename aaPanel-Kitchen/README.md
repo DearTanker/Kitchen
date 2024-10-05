@@ -28,6 +28,7 @@ chattr +i -R /www/server/panel/logs/request
 ```
 
 ### aaPanel 6.8.x 优化脚本 | 谨慎使用
+感谢原脚本：https://blog.cccyun.cn/post-431.html
 
 ```
 wget -O optimize.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-optimize.sh && bash optimize.sh
