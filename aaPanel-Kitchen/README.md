@@ -26,9 +26,3 @@ chattr +i /www/server/panel/script/site_task.py
 rm -rf /www/server/panel/logs/request/*
 chattr +i -R /www/server/panel/logs/request
 ```
-
-### aaPanel 优化脚本 | 似乎已失效，谨慎使用
-
-```
-wget -O optimize.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-optimize.sh && bash optimize.sh
-```
