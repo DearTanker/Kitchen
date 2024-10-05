@@ -1,6 +1,6 @@
 感谢原项目：https://github.com/AaronYES/aaPanel
 
-### aaPanel 小工具 | 安装原版、降级 6.8.37、降级 6.8.23 等
+### aaPanel 小工具 | 安装原版、降级 6.8.* 系列等
 
 ```
 wget https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-tools.sh  -O aapanel-tools.sh && chmod +x aapanel-tools.sh && clear && ./aapanel-tools.sh
