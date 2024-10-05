@@ -1,3 +1,8 @@
+/*
+ * aaPanel 面板官方安装脚本 20241005 
+ * 原地址 https://www.aapanel.com/script/install_7.0_en.sh
+*/
+
 #!/bin/bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
