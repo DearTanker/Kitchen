@@ -31,5 +31,5 @@ chattr +i -R /www/server/panel/logs/request
 感谢原脚本：https://blog.cccyun.cn/post-431.html
 
 ```
-wget -O optimize.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-optimize.sh && bash optimize.sh
+wget -O aapanel-optimize.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-optimize.sh && bash aapanel-optimize.sh
 ```
