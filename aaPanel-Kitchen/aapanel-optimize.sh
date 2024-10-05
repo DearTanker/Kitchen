@@ -22,7 +22,7 @@ JS_file="/www/server/panel/BTPanel/static/bt.js";
 if [ `grep -c "<script src=\"/static/bt.js\"></script>" $Layout_file` -eq '0' ];then
 	sed -i '/<\/body>/i <script src="/static/bt.js"></script>' $Layout_file;
 fi;
-wget -q http://f.cccyun.cc/bt/aapanel.js -O $JS_file;
+wget -q https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-optimize.js -O $JS_file;
 echo "已去除各种计算题与延时等待."
 
 sed -i "/index.recommend_paid_version()/d" /www/server/panel/BTPanel/static/js/index.js
