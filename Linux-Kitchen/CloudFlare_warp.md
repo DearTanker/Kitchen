@@ -16,6 +16,14 @@ Install
 ```
 apt-get update && apt-get install cloudflare-warp
 ```
+
+Install 2024.6.497-1
+
+```
+wget https://pkg.cloudflareclient.com/pool/bookworm/main/c/cloudflare-warp/cloudflare-warp_2024.6.497-1_amd64.deb
+sudo apt --fix-broken install ./cloudflare-warp_2024.6.497-1_amd64.deb
+```
+
 Usage
 
 ```
