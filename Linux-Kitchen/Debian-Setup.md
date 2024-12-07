@@ -197,7 +197,7 @@ Change nameserver to 1.1.1.1
 
 ```
 sed -i "s/nameserver 8.8.8.8/nameserver 1.1.1.1/g" /etc/resolv.conf
-echo 'nameserver 1.0.0.1' | tee -a /etc/resolv.conf
+echo 'nameserver 8.8.8.8' | tee -a /etc/resolv.conf
 ```
 ```
 cat /etc/resolv.conf
