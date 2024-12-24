@@ -110,7 +110,7 @@ ulimit -a
 apt update -y && apt dist-upgrade -y
 ```
 ```
-apt install wget curl net-tools sudo htop iotop python3 lsb-release gpg vnstat iperf3 jq bc netcat dnsutils iproute2 -y
+apt install wget curl net-tools sudo htop iotop python3 lsb-release gpg vnstat iperf3 jq bc netcat-traditional dnsutils iproute2 -y
 ```
 ```
 apt autoremove -y
