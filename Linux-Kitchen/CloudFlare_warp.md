@@ -29,7 +29,6 @@ Disable log to free disk space
 
 ```
 echo "" > /var/log/cloudflare-warp/cfwarp_service_log.txt
-chattr +i /var/log/cloudflare-warp/cfwarp_service_log.txt
 ```
 ```
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_log.txt -sfv
