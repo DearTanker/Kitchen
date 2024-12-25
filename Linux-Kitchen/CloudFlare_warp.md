@@ -15,7 +15,7 @@ echo "deb [signed-by=/usr/share/keyrings/cloudflare-warp-archive-keyring.gpg] ht
 
 Install
 ```
-apt-get update && apt-get install cloudflare-warp
+apt-get update && apt-get install cloudflare-warp -y
 ```
 
 Install 2024.6.497-1
