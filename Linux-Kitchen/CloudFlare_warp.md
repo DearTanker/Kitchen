@@ -1,4 +1,4 @@
-[https://pkg.cloudflareclient.com/install](https://pkg.cloudflareclient.com/install)
+[https://pkg.cloudflareclient.com](https://pkg.cloudflareclient.com)
 
 [https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/manual-deployment](https://developers.cloudflare.com/cloudflare-one/connections/connect-devices/warp/deployment/manual-deployment)
 
