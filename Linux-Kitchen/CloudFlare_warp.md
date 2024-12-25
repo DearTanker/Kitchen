@@ -25,6 +25,16 @@ wget https://pkg.cloudflareclient.com/pool/bookworm/main/c/cloudflare-warp/cloud
 sudo apt --fix-broken install ./cloudflare-warp_2024.6.497-1_amd64.deb
 ```
 
+Disable log to free disk space
+
+```
+echo "" > /var/log/cloudflare-warp/cfwarp_service_log.txt
+chattr +i /var/log/cloudflare-warp/cfwarp_service_log.txt
+```
+```
+ln /dev/null /var/log/cloudflare-warp/cfwarp_service_log.txt -sfv
+```
+
 Usage
 
 ```
