@@ -202,3 +202,7 @@ echo 'nameserver 8.8.8.8' | tee -a /etc/resolv.conf
 ```
 cat /etc/resolv.conf
 ```
+
+```
+/etc/init.d/networking restart
+```
