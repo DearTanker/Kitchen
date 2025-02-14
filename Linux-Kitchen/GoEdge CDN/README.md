@@ -65,9 +65,16 @@ GoEdge CDN 是一个高性能、易于使用的内容分发网络（CDN）解决
     ```
     cd /usr/local/goedge/edge-admin/edge-api/deploy
     rm -rf *.zip
+    ```
+    X86_64
+    ```
     wget -O edge-node-linux-amd64-v1.3.9.zip https://github.com/DearTanker/Kitchen/releases/download/GoEdge/edge-node-linux-amd64-plus-v1.3.9.zip
+    ```
+    ARM
+    ```
     wget -O edge-node-linux-arm64-v1.3.9.zip https://github.com/DearTanker/Kitchen/releases/download/GoEdge/edge-node-linux-arm64-plus-v1.3.9.zip
     ```
+    
 8. 激活开心版
 
     注册码：
