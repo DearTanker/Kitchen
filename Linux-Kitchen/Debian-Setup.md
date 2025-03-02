@@ -123,6 +123,12 @@ reboot
 Remove old kernel
 
 ```
+wget https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/Shells/debian_clean_old_kernels.sh
+chmod +x debian_clean_old_kernels.sh
+./debian_clean_old_kernels.sh
+```
+
+```
 uname -a
 ```
 
