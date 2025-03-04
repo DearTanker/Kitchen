@@ -1,0 +1,57 @@
+/*
+Theme Name:  WimPo
+Theme URI:   https://www.deartanker.com
+Description: Child Theme of Twenty Twenty-Four modified by DearTanker.
+Author:      DearTanker
+Author URI:  https://www.deartanker.com
+Template:    twentytwentyfour
+Version:     1.015
+*/
+
+/* Child Settings */
+
+body {
+    --wp--preset--font-family--heading: Cardo;
+    --wp--preset--font-family--system-sans-serif: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --wp--preset--font-family--system-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	--wp--preset--font-family--system-mono: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+}
+
+a {
+    text-underline-offset: 0.3rem;
+}
+
+code {
+	font-family: var(--wp--preset--font-family--system-mono);
+}
+
+mark {
+	border-radius: 0.1rem;
+	padding: 0.01rem 0.2rem 0.1rem 0.2rem;
+	margin: 0 0.1rem;
+}
+
+p img {
+	vertical-align: -0.25rem;
+}
+
+img.wp-smiley, img.emoji, img.ext-emoji, .small-emoji {
+    margin: 0 0.2em !important;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots):not(.alignwide):not(.alignfull) {
+    margin-inline-start: unset;
+    margin-inline-end: unset;
+}
+
+.wp-block-code {
+    border-radius: var(--wp--preset--spacing--10);
+    padding-top: calc(var(--wp--preset--spacing--10) + 0.05rem);
+    padding-right: calc(var(--wp--preset--spacing--10) + 1.55rem);
+    padding-bottom: calc(var(--wp--preset--spacing--10) + 0.05rem);
+    padding-left: calc(var(--wp--preset--spacing--10) + 0.55rem);
+}
+
+.wp-block-code code {
+    font-family: var(--wp--preset--font-family--system-mono);
+}

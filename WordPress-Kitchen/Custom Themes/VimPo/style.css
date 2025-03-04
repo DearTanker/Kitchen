@@ -1,0 +1,168 @@
+/*
+Theme Name:  VimPo
+Theme URI:   https://www.deartanker.com
+Description: Child Theme of Twenty Twenty-Two
+Author:      DearTanker
+Author URI:  https://www.deartanker.com
+Template:    twentytwentytwo
+Version:     1.0
+*/
+
+/* Font Settings*/
+
+body {
+	--global--font-serif: Georgia,"Times New Roman",PMingLiu,STSong,SimSun,"Noto Serif CJK","WenQuanYi Bitmap Song",serif;
+	--global--font-mono: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+	--wp--preset--font-family--system-font: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	--wp--preset--font-family--source-serif-pro: "Source Serif Pro", serif;
+
+	--wp--preset--font-size--small: 1rem;
+	--wp--preset--font-size--medium: 1.125rem;
+	--wp--preset--font-size--large: 1.75rem;
+	--wp--preset--font-size--x-large: clamp(1.75rem, 3vw, 2.25rem);
+
+	--wp--custom--spacing--small: max(1.25rem, 5vw);
+	--wp--custom--spacing--medium: clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)));
+	--wp--custom--spacing--large: clamp(4rem, 10vw, 8rem);
+	--wp--custom--spacing--outer: var(--wp--custom--spacing--small, 1.25rem);
+
+	--wp--custom--typography--font-size--huge: clamp(2.25rem, 4vw, 2.75rem);
+	--wp--custom--typography--font-size--gigantic: clamp(2.75rem, 6vw, 3.25rem);
+	--wp--custom--typography--font-size--colossal: clamp(3.25rem, 8vw, 6.25rem);
+	
+	--wp--custom--typography--line-height--tiny: 1.15;
+	--wp--custom--typography--line-height--small: 1.2;
+	--wp--custom--typography--line-height--medium: 1.4;
+	--wp--custom--typography--line-height--normal: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--wp--preset--font-family--system-font) !important;
+	font-weight: var(--heading--font-weight-strong) !important;
+}
+
+sub, sup {
+	font-size: small;
+}
+
+code {
+	font-family: var(--global--font-mono);
+}
+
+p code, li code {
+	padding: 0.1rem 0.3rem;
+	margin: 0 0.2rem;
+	border: 1px solid #ddd;
+	border-radius: 0.2rem;
+	color: #666;
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+p img {
+	vertical-align: -0.1rem;
+}
+
+mark {
+	border-radius: 0.1rem;
+	padding: 0 0.2rem 0.1rem 0.2rem;
+	margin: 0 0.1rem;
+	background-color: unset;
+	color: unset;
+}
+
+ul, ol {
+	padding-left: 1.5rem;
+}
+
+pre {
+	font-family: var(--wp--preset--font-family--source-serif-pro);
+}
+
+pre.wp-block-verse {
+	font-family: var(--wp--preset--font-family--source-serif-pro);
+	font-size: var(--wp--preset--font-size--large);
+	font-weight: var(--heading--font-weight-strong);
+	padding: 2.8rem 3rem;
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+pre.wp-block-preformatted {
+	padding: 0.8rem 1rem;
+	border-radius: 0.2rem;
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+.wp-block-code {
+	padding: 0.8rem 1rem;
+	font-family: var(--global--font-mono);
+	background-color: var(--wp--preset--color--tertiary);
+}
+
+.wp-block-code code {
+	white-space: pre;
+	overflow: auto;
+}
+
+.wp-block-gallery,
+.wp-block-image,
+.wp-block-embed,
+.wp-block-table {
+	margin-top: var( --wp--style--block-gap );
+}
+
+
+.wp-block-quote cite:before,
+.wp-block-pullquote cite:before {
+	content: "— ";
+	font-style: normal;
+	opacity: 0.9;
+}
+
+.wp-block-quote cite, .wp-block-quote footer {
+	font-style: italic;
+	opacity: 0.6;
+}
+
+.wp-block-pullquote__citation, .wp-block-pullquote cite, .wp-block-pullquote footer {
+	font-style: italic;
+	opacity: 0.6;
+}
+
+.wp-block-pullquote {
+	margin: 0 auto;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote cite {
+	font-style: italic;
+	opacity: 0.6;
+}
+
+.wp-block-separator {
+	clear: both;
+}
+
+.wp-block-post-comments .commentlist {
+	clear: both;
+	padding: 1.4rem 0;
+}
+
+.says {
+	padding-left: 0.2rem;
+}
+
+img.wp-smiley, img.emoji {
+	margin: 0 0.1rem !important;
+}
+
+.comment-metadata {
+	font-size: 0.8rem;
+	opacity: 0.6;
+}
+
+.comment-respond {
+	padding-top: 2rem;
+}
+
+.page-numbers {
+	margin: 0 1rem;
+}
