@@ -18,6 +18,10 @@ Update pip
 /www/server/panel/pyenv/bin/python3 -m pip install --upgrade pip
 ```
 
+```
+btpip install pyOpenSSL==24.2.1 -U
+```
+
 Disable log upload
 
 ```
