@@ -14,6 +14,11 @@ Update pip
 ```
 /www/server/panel/pyenv/bin/python3.7 -m pip install --upgrade pip
 ```
+
+```
+btpip install pyOpenSSL==24.2.1 -U
+```
+
 Local Proxy
 
 ```
