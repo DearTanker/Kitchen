@@ -22,4 +22,7 @@ curl -L -O $GEOIP_URL
 echo -e "${GREEN}>>> downloading geosite.dat files...${NC}"
 curl -L -O $GEOSITE_URL
 
+echo -e "${GREEN}>>> restart service...${NC}"
+systemctl restart v2ray
+
 echo -e "${GREEN}Done!${NC}"
