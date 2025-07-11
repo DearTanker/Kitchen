@@ -213,3 +213,20 @@ cat /etc/resolv.conf
 ```
 /etc/init.d/networking restart
 ```
+
+
+Fix Root
+
+```
+sudo chown -R root:root . && \
+sudo find . -type d -exec chmod 755 {} \; && \
+sudo find . -type f -exec chmod 644 {} \;
+```
+
+Fix www
+
+```
+sudo chown -R www:www . && \
+sudo find . -type d -exec chmod 755 {} \; && \
+sudo find . -type f -exec chmod 644 {} \;
+```
