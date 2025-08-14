@@ -41,3 +41,20 @@ chattr +i -R /www/server/panel/logs/request
 ```
 wget -O aapanel-optimize.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/aaPanel-Kitchen/aapanel-optimize.sh && bash aapanel-optimize.sh
 ```
+
+
+
+AWS S3 1.4 use other s3
+
+/www/server/panel/plugin/aws_s3/s3lib/client
+
+```
+    def build_auth(self):
+        config = client(
+            's3',
+            aws_access_key_id=self.__secret_id,
+            aws_secret_access_key=self.__secret_key,
+            endpoint_url = 'https://your-endpoint-url',
+        )
+        return config
+```
