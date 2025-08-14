@@ -58,3 +58,11 @@ AWS S3 1.4 use other s3
         )
         return config
 ```
+
+修改网站备份功能，使其可以备份软链接的源文件
+路径 /www/server/panel/class/panelBackup.py 第 400 行
+```
+        public.ExecShell("cd " + os.path.dirname(
+            spath) + " && tar --dereference -zcvf '" + dfile + "' " + self._exclude + " '" + dirname + "' 2>{err_log} 1> /dev/null".format(
+            err_log=self._err_log))
+```
