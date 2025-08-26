@@ -32,6 +32,7 @@ echo "" > /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_boring.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_connection_stats.txt
+echo "" > /var/log/cloudflare-warp/cfwarp_service_dex.txt.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_dns_stats.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_dynamic_log.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_taskdump.txt
@@ -41,6 +42,7 @@ ln /dev/null /var/log/cloudflare-warp/cfwarp_daemon_dns.txt -sfv
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_boring.txt -sfv
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt -sfv
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_connection_stats.txt -sfv
+ln /dev/null /var/log/cloudflare-warp/cfwarp_service_dex.txt -sfv
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_dns_stats.txt -sfv
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_dynamic_log.txt -sfv
 ln /dev/null /var/log/cloudflare-warp/cfwarp_service_taskdump.txt -sfv
