@@ -9,7 +9,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 ### Update dat files
 
 ```
-wget --no-check-certificate -O XR-update-dat.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/XR-update-dat.sh
+wget --no-check-certificate -O XR-update-dat.sh https://raw.githubusercontent.com/DearTanker/Kitchen/main/Linux-Kitchen/v2/XR-update-dat.sh
 chmod +x XR-update-dat.sh
 ./XR-update-dat.sh
 ```
