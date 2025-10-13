@@ -11,7 +11,16 @@ GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/downl
 GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
 echo -e "${GREEN}>>> change directory...${NC}"
-cd $v2ray_folder
+echo -e "${GREEN}>>> ensure directory exists: $v2ray_folder${NC}"
+if [ ! -d "$v2ray_folder" ]; then
+	echo -e "${GREEN}>>> creating directory $v2ray_folder${NC}"
+	if ! mkdir -p "$v2ray_folder"; then
+		echo "Error: failed to create directory $v2ray_folder" >&2
+		exit 1
+	fi
+fi
+
+cd "$v2ray_folder" || { echo "Error: cannot change directory to $v2ray_folder" >&2; exit 1; }
 
 echo -e "${GREEN}>>> delete old dat files...${NC}"
 rm -f geoip.dat geosite.dat
