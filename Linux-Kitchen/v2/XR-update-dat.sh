@@ -2,7 +2,7 @@
 
 set -e
 
-v2ray_folder="/usr/local/share/xray/"
+xray_folder="/usr/local/share/xray/"
 
 GREEN='\033[0;32m'
 NC='\033[0m'
@@ -11,7 +11,17 @@ GEOIP_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/downl
 GEOSITE_URL="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
 echo -e "${GREEN}>>> change directory...${NC}"
-cd $v2ray_folder
+echo -e "${GREEN}>>> ensure directory exists: $xray_folder${NC}"
+if [ ! -d "$xray_folder" ]; then
+	echo -e "${GREEN}>>> creating directory $xray_folder${NC}"
+	if ! mkdir -p "$xray_folder"; then
+		echo "Error: failed to create directory $xray_folder" >&2
+		exit 1
+	fi
+fi
+
+# change into the directory, fail if not possible
+cd "$xray_folder" || { echo "Error: cannot change directory to $xray_folder" >&2; exit 1; }
 
 echo -e "${GREEN}>>> delete old dat files...${NC}"
 rm -f geoip.dat geosite.dat
