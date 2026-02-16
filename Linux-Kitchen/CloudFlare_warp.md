@@ -28,6 +28,64 @@ sudo apt --fix-broken install ./cloudflare-warp_2024.6.497-1_amd64.deb
 Disable log to free disk space
 
 ```
+systemctl stop warp-svc
+```
+
+```
+rm -rf /var/log/cloudflare-warp
+mkdir -p /var/log/cloudflare-warp
+mount -t tmpfs -o size=1M,mode=0755 tmpfs /var/log/cloudflare-warp
+```
+fstab
+```
+tmpfs /var/log/cloudflare-warp tmpfs size=1M,mode=0755 0 0
+```
+```
+rm -f /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
+touch /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_boring.txt
+touch /var/log/cloudflare-warp/cfwarp_service_boring.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_boring.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
+touch /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_connection_stats.txt
+touch /var/log/cloudflare-warp/cfwarp_service_connection_stats.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_connection_stats.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_dex.txt
+touch /var/log/cloudflare-warp/cfwarp_service_dex.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_dex.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_dns_stats.txt
+touch /var/log/cloudflare-warp/cfwarp_service_dns_stats.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_dns_stats.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_dynamic_log.txt
+touch /var/log/cloudflare-warp/cfwarp_service_dynamic_log.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_dynamic_log.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_log.txt
+touch /var/log/cloudflare-warp/cfwarp_service_log.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_log.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_stats.txt
+touch /var/log/cloudflare-warp/cfwarp_service_stats.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_stats.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_taskdump.txt
+touch /var/log/cloudflare-warp/cfwarp_service_taskdump.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_taskdump.txt
+
+rm -f /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
+touch /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
+mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
+```
+```
 echo "" > /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_boring.txt
 echo "" > /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
