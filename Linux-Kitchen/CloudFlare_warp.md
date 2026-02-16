@@ -88,19 +88,35 @@ rm -f /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
 touch /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
 mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
 ```
-
+cloudflare-warp-log-bind.service
 ```
 cat >/etc/systemd/system/cloudflare-warp-log-bind.service <<'EOF'
 [Unit]
 Description=Bind Cloudflare WARP logs to /dev/null
-DefaultDependencies=no
-Before=warp-svc.service
-Before=cloudflare-warp.service
-After=local-fs.target
+RequiresMountsFor=/var/log/cloudflare-warp
+After=var-log-cloudflare-warp.mount
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
+
+# ensure directory exists (just in case)
+ExecStart=/usr/bin/mkdir -p /var/log/cloudflare-warp
+
+# ensure files exist
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_boring.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_connection_stats.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_dex.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_dns_stats.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_dynamic_log.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_log.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_stats.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_taskdump.txt
+ExecStart=/usr/bin/install -m 0644 /dev/null /var/log/cloudflare-warp/cfwarp_service_network_health_stats.txt
+
+# bind to /dev/null
 ExecStart=/usr/bin/mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_daemon_dns.txt
 ExecStart=/usr/bin/mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_boring.txt
 ExecStart=/usr/bin/mount --bind /dev/null /var/log/cloudflare-warp/cfwarp_service_captive_portal.txt
